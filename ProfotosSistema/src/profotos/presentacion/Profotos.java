@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package profotos;
+package profotos.presentacion;
+
+import javax.swing.JOptionPane;
+import negocio.Clases.UsuarioNegocio;
+import profotos.entidades.clases.Usuario;
 
 /**
  *
@@ -16,6 +20,10 @@ public class Profotos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
-    
+        boolean login = UsuarioNegocio.Login("admin", "admin");
+        if (login)
+            System.out.println("Login con éxito");
+        else 
+            System.out.println("Login fallido");
+    } 
 }
