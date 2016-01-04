@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package profotos.entidades;
+package profotos.entidades.clases;
 
 /**
  *
  * @author Chuy
  */
-enum Perfil {
-    ADMIN,SUPERADMIN;
-    
-    
+enum TipoEmpleado {
+ LIDER,FOTOGRAFO,VENDEDOR;   
 }
