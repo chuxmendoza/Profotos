@@ -9,13 +9,12 @@ package profotos.entidades.clases;
  *
  * @author Chuy
  */
-class ArticuloVenta {
+public class ArticuloVenta {
     private int id;
     private Double precio;
     private int cantidad;
     private Double costo;
-    private Double iva;
-    private Historial Historial;
+    private Iva iva; 
     private Articulo articulo;
     
    //<editor-fold defaultstate="collapsed" desc=" Getters and Setters del articuloVenta ">
@@ -74,33 +73,19 @@ class ArticuloVenta {
      */
     public void setCosto(Double costo) {
         this.costo = costo;
-    }
-
-    /**
-     * @return the Historial
-     */
-    public Historial getHistorial() {
-        return Historial;
-    }
-
-    /**
-     * @param Historial the Historial to set
-     */
-    public void setHistorial(Historial Historial) {
-        this.Historial = Historial;
-    }
-
+    } 
+    
     /**
      * @return the iva
      */
-    public Double getIva() {
+    public Iva getIva() {
         return iva;
     }
 
     /**
      * @param iva the iva to set
      */
-    public void setIva(Double iva) {
+    public void setIva(Iva iva) {
         this.iva = iva;
     }
 

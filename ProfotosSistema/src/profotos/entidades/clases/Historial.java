@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Chuy
  */
-class Historial {
+public class Historial {
     private int id;
     private Date fecha;
     private int cantidad;
