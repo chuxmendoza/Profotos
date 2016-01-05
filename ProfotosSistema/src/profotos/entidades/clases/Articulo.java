@@ -5,17 +5,19 @@
  */
 package profotos.entidades.clases;
 
+import java.util.List;
+
 /**
  *
  * @author Chuy
  */
-class Articulo {
+public class Articulo {
     private int id;
     private Double precio;
     private int cantidad;
     private Double costo;
-    private Double iva;
-    
+    private Iva iva;
+    private List<Historial> historial;
     
 //<editor-fold defaultstate="collapsed" desc=" Getters and Setters del articulo ">
     /**
@@ -77,20 +79,29 @@ class Articulo {
     /**
      * @return the iva
      */
-    public Double getIva() {
+    public Iva getIva() {
         return iva;
     }
 
     /**
      * @param iva the iva to set
      */
-    public void setIva(Double iva) {
+    public void setIva(Iva iva) {
         this.iva = iva;
+    } 
+    
+    /**
+     * @return the historial
+     */
+    public List<Historial> getHistorial() {
+        return historial;
     }
 
     /**
-     * @return the Historial
+     * @param historial the Historial to set
      */
-    
+    public void setHistorial(List<Historial> historial) {
+        this.historial = historial;
+    }
    //</editor-fold>
 }

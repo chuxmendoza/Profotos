@@ -1,13 +1,8 @@
 package negocio.Clases;
-
-
-
-import negocio.utils.HibernateUtils;
-import org.hibernate.Query;
+ 
+import negocio.utils.HibernateUtils; 
 import org.hibernate.Session;
-import org.hibernate.criterion.Projections;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.transform.Transformers;
+import org.hibernate.criterion.Projections; 
 import profotos.entidades.clases.Usuario;
 
 /**

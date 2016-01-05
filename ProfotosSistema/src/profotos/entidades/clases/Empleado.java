@@ -9,7 +9,7 @@ package profotos.entidades.clases;
  *
  * @author Chuy
  */
-class Empleado {
+public class Empleado {
     private int id;
     private String nombre;
     private TipoEmpleado tipoEmpleado;

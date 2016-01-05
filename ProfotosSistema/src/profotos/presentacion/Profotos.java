@@ -6,7 +6,10 @@
 package profotos.presentacion;
 
 import javax.swing.JOptionPane;
+import negocio.Clases.EgresoNegocio;
+import negocio.Clases.IvaNegocio;
 import negocio.Clases.UsuarioNegocio;
+import profotos.entidades.clases.Egreso;
 import profotos.entidades.clases.Usuario;
 
 /**
@@ -20,10 +23,14 @@ public class Profotos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        boolean login = UsuarioNegocio.Login("admin", "admin");
-        if (login)
-            System.out.println("Login con éxito");
+        Egreso egreso = EgresoNegocio.Obtener(1);
+        if (egreso != null)
+            System.out.println(""+egreso.getNombre());
         else 
-            System.out.println("Login fallido");
+            System.out.println("null");
+//        if (login)
+//            System.out.println("Login con éxito");
+//        else 
+//            System.out.println("Login fallido");
     } 
 }
