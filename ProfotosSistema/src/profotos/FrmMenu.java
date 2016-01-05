@@ -59,7 +59,6 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuBarArticulo = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuUsuarios = new javax.swing.JMenuItem();
-        jMenuFoto = new javax.swing.JMenuItem();
         jMenuEventos = new javax.swing.JMenuItem();
         jMenuEgresos = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
@@ -91,7 +90,7 @@ public class FrmMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("CheckBox.light"));
+        jPanel1.setBackground(new java.awt.Color(85, 152, 183));
         jPanel1.setLayout(null);
 
         jMenu1.setText("Funciones");
@@ -104,14 +103,6 @@ public class FrmMenu extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuUsuarios);
 
-        jMenuFoto.setText("Fotografía");
-        jMenuFoto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuFotoActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuFoto);
-
         jMenuEventos.setText("Eventos");
         jMenuEventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +111,7 @@ public class FrmMenu extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuEventos);
 
-        jMenuEgresos.setText("Egresos");
+        jMenuEgresos.setText("Inversión");
         jMenuEgresos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuEgresosActionPerformed(evt);
@@ -140,7 +131,7 @@ public class FrmMenu extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem2);
 
-        jMenuItem4.setText("Inversión");
+        jMenuItem4.setText("Fotografia");
         jMenu6.add(jMenuItem4);
 
         jMenuBarArticulo.add(jMenu6);
@@ -151,11 +142,13 @@ public class FrmMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,12 +157,11 @@ public class FrmMenu extends javax.swing.JFrame {
     private void jMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuUsuariosActionPerformed
         // TODO add your handling code here:
 //Si ya está el otro Jpanel añadido al contenedor, entonces se elimina
-try{
-this.remove(jpUsuarios);
+  try{
 this.remove(jpEventos);
+this.remove(jpUsuarios);
 this.remove(jpEgresos);
 this.remove(jpFotografia);
-
 }
 catch(Exception e){
 }
@@ -183,9 +175,10 @@ this.pack();
     }//GEN-LAST:event_jMenuUsuariosActionPerformed
 
     private void jMenuEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEventosActionPerformed
-      try{
-this.remove(jpUsuarios);
+      
+        try{
 this.remove(jpEventos);
+this.remove(jpUsuarios);
 this.remove(jpEgresos);
 this.remove(jpFotografia);
 }
@@ -198,45 +191,27 @@ this.pack();
 
     }//GEN-LAST:event_jMenuEventosActionPerformed
 
-    private void jMenuFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuFotoActionPerformed
-        // TODO add your handling code here:
-        try{
-this.remove(jpUsuarios);
-this.remove(jpEventos);
-this.remove(jpEgresos);
-this.remove(jpFotografia);
-
-}
-catch(Exception e){
-}
-jpFotografia = new JPanelFotografia();
-
-this.add(jpFotografia, BorderLayout.CENTER);
-this.pack();
-
-    }//GEN-LAST:event_jMenuFotoActionPerformed
-
-    private void jMenuEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEgresosActionPerformed
-        // TODO add your handling code here:
-         try{
-this.remove(jpUsuarios);
-this.remove(jpEventos);
-this.remove(jpEgresos);
-this.remove(jpFotografia);
-}
-catch(Exception e){
-}
- jpEgresos = new JPanelEgresos();
-
-//Agregamos la instancia al JFrame, con un layout al centro
-this.add(jpEgresos, BorderLayout.CENTER);
-//Hacemos que el JFrame tenga el tamaño de todos sus elementos
-this.pack();
-    }//GEN-LAST:event_jMenuEgresosActionPerformed
-
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEgresosActionPerformed
+        // TODO add your handling code here:
+        try{
+            this.remove(jpUsuarios);
+            this.remove(jpEventos);
+            this.remove(jpEgresos);
+            this.remove(jpFotografia);
+        }
+        catch(Exception e){
+        }
+        jpEgresos = new JPanelEgresos();
+
+        //Agregamos la instancia al JFrame, con un layout al centro
+        this.add(jpEgresos, BorderLayout.CENTER);
+        //Hacemos que el JFrame tenga el tamaño de todos sus elementos
+        this.pack();
+    }//GEN-LAST:event_jMenuEgresosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,7 +230,6 @@ this.pack();
     private javax.swing.JMenuBar jMenuBarArticulo;
     private javax.swing.JMenuItem jMenuEgresos;
     private javax.swing.JMenuItem jMenuEventos;
-    private javax.swing.JMenuItem jMenuFoto;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
