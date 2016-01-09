@@ -12,13 +12,14 @@ import java.util.List;
  *
  * @author Chuy
  */
-class Venta {
+public class Venta {
     private int id;
     private String empleado;
-    private List<ArticuloVenta> articulos;
+    //private List<ArticuloVenta> articulos;
     private List<EgresoValor> egresos;
     private TipoEmpleado tipoEmpleado;
     private Date fecha;
+    private double total;
     
  //<editor-fold defaultstate="collapsed" desc=" Getters and Setters de la venta ">
     /**
@@ -49,29 +50,29 @@ class Venta {
         this.empleado = empleado;
     }
 
-    /**
-     * @return the articuloVenta
-     */
-    public List<ArticuloVenta> getArticulos() {
-        return articulos;
-    }
+//    /**
+//     * @return the articuloVenta
+//     */
+//    public List<ArticuloVenta> getArticulos() {
+//        return articulos;
+//    }
+//
+//    /**
+//     * @param articuloVenta the articuloVenta to set
+//     */
+//    public void setArticulos(List<ArticuloVenta> articulos) {
+//        this.articulos = articulos;
+//    }
 
     /**
-     * @param articuloVenta the articuloVenta to set
-     */
-    public void setArticulos(List<ArticuloVenta> articulos) {
-        this.articulos = articulos;
-    }
-
-    /**
-     * @return the egresoValor
+     * @return the egresos
      */
     public List<EgresoValor> getEgresos() {
         return egresos;
     }
 
     /**
-     * @param egresoValor the egresoValor to set
+     * @param egresos the egresoValor to set
      */
     public void setEgresos(List<EgresoValor> egresos) {
         this.egresos = egresos;
@@ -104,6 +105,20 @@ class Venta {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    //</editor-fold>
 
+    /**
+     * @return the total
+     */
+    public double getTotal() {
+        return total;
+    }
+
+    /**
+     * @param total the total to set
+     */
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    //</editor-fold>
 }

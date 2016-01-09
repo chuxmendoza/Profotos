@@ -7,10 +7,18 @@ package profotos.presentacion;
 
 import javax.swing.JOptionPane;
 import negocio.Clases.EgresoNegocio;
+import negocio.Clases.EgresoValorNegocio;
+import negocio.Clases.EventoNegocio;
 import negocio.Clases.IvaNegocio;
+import negocio.Clases.SueldoNegocio;
 import negocio.Clases.UsuarioNegocio;
+import negocio.Clases.VentaNegocio;
 import profotos.entidades.clases.Egreso;
+import profotos.entidades.clases.EgresoValor;
+import profotos.entidades.clases.Evento;
+import profotos.entidades.clases.Sueldo;
 import profotos.entidades.clases.Usuario;
+import profotos.entidades.clases.Venta;
 
 /**
  *
@@ -23,9 +31,10 @@ public class Profotos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Egreso egreso = EgresoNegocio.Obtener(1);
-        if (egreso != null)
-            System.out.println(""+egreso.getNombre());
+        Evento entidad = EventoNegocio.Obtener(1);
+        if (entidad != null)
+            System.out.println("Evento: "+entidad.getNombre()+"\n"
+            +"Venta por: "+entidad.getVentas().get(0).getEmpleado());
         else 
             System.out.println("null");
 //        if (login)

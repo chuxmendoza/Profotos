@@ -15,16 +15,16 @@ public class EgresoNegocio {
        
     public static Egreso Obtener(int id)
     { 
-        Egreso egreso = new Egreso();
+        Egreso entidad = new Egreso();
         try
         {
           Session session = HibernateUtils.getSessionFactory().openSession();
-          egreso = (Egreso) session.createCriteria(Egreso.class).add(Expression.eq("id", id)).uniqueResult();
+          entidad = (Egreso) session.createCriteria(Egreso.class).add(Expression.eq("id", id)).uniqueResult();
         }
         catch(Exception ex)
         {
             throw ex;
         }
-        return egreso; 
+        return entidad; 
     }
 }

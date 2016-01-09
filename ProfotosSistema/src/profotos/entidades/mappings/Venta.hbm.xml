@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="profotos.entidades.clases.Venta" table="venta">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id> 
+        <property name="tipoEmpleado" column="tipoEmpleado">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">profotos.entidades.clases.TipoEmpleado</param>
+            </type>
+        </property>
+        <list name="egresos" cascade="all">
+         <key column="idVenta"/>
+         <list-index column="idx"/>
+         <one-to-many class="profotos.entidades.clases.EgresoValor"/>
+        </list>
+        <property name="empleado" type="string" column="empleado" length="80"/>
+        <property name="fecha" type="date" not-null="true"/>
+        <property name="total" type="double" column="total" />
+    </class>
+</hibernate-mapping>
