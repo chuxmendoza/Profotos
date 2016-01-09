@@ -9,7 +9,7 @@ package profotos.entidades.clases;
  *
  * @author Chuy
  */
-class Egreso {
+public class Egreso {
     private int id;
     private String nombre;
 
