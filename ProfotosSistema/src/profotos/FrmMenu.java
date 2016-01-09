@@ -13,7 +13,7 @@ import java.awt.FlowLayout;
  * @author Chuy
  */
 public class FrmMenu extends javax.swing.JFrame {
-
+int funcion = 0;
     /**
      * Creates new form Evento
      */
@@ -25,12 +25,12 @@ public class FrmMenu extends javax.swing.JFrame {
          jpEventos = new JPanelEventos();
          this.add(jpEventos, BorderLayout.CENTER);
          this.pack();
-         
+         funcion=1;
     }
     private JPanelEventos jpEventos;
-    private JPanelUsuarios jpUsuarios;
-    private JPanelFotografia jpFotografia;
+    private JPanelUsuarios jpUsuarios;   
     private JPanelEgresos jpEgresos;
+  
     
     
 
@@ -89,6 +89,7 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(85, 152, 183));
         jPanel1.setLayout(null);
@@ -132,6 +133,11 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenu6.add(jMenuItem2);
 
         jMenuItem4.setText("Fotografia");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu6.add(jMenuItem4);
 
         jMenuBarArticulo.add(jMenu6);
@@ -156,62 +162,102 @@ public class FrmMenu extends javax.swing.JFrame {
 
     private void jMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuUsuariosActionPerformed
         // TODO add your handling code here:
+      
 //Si ya está el otro Jpanel añadido al contenedor, entonces se elimina
   try{
-this.remove(jpEventos);
-this.remove(jpUsuarios);
-this.remove(jpEgresos);
-this.remove(jpFotografia);
+          
+      if(funcion == 1){
+         this.remove(jpEventos);
+      }else{
+          if(funcion ==2){
+              this.remove(jpUsuarios);
+          }else{
+              this.remove(jpEgresos);
+          }
+          
+      }
+ 
+
+
+  
 }
 catch(Exception e){
 }
  jpUsuarios = new JPanelUsuarios();
 
 //Agregamos la instancia al JFrame, con un layout al centro
-this.add(jpUsuarios, BorderLayout.CENTER);
+this.add(jpUsuarios);
 //Hacemos que el JFrame tenga el tamaño de todos sus elementos
 this.pack();
+funcion=2;
 
     }//GEN-LAST:event_jMenuUsuariosActionPerformed
 
     private void jMenuEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEventosActionPerformed
       
         try{
-this.remove(jpEventos);
-this.remove(jpUsuarios);
-this.remove(jpEgresos);
-this.remove(jpFotografia);
+          
+      if(funcion == 1){
+         this.remove(jpEventos);
+      }else{
+          if(funcion ==2){
+              this.remove(jpUsuarios);
+          }else{
+              this.remove(jpEgresos);
+          }
+          
+      }
+ 
 }
 catch(Exception e){
 }
       jpEventos = new JPanelEventos();
 
-this.add(jpEventos, BorderLayout.CENTER);
+this.add(jpEventos);
 this.pack();
+funcion=1;
 
     }//GEN-LAST:event_jMenuEventosActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+        FrmIva iva = new FrmIva();
+        this.setVisible(true);
+        iva.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEgresosActionPerformed
         // TODO add your handling code here:
-        try{
-            this.remove(jpUsuarios);
-            this.remove(jpEventos);
-            this.remove(jpEgresos);
-            this.remove(jpFotografia);
-        }
-        catch(Exception e){
-        }
-        jpEgresos = new JPanelEgresos();
+      try{
+          
+      if(funcion == 1){
+         this.remove(jpEventos);
+      }else{
+          if(funcion ==2){
+              this.remove(jpUsuarios);
+          }else{
+              this.remove(jpEgresos);
+          }          
+      }
 
-        //Agregamos la instancia al JFrame, con un layout al centro
-        this.add(jpEgresos, BorderLayout.CENTER);
-        //Hacemos que el JFrame tenga el tamaño de todos sus elementos
-        this.pack();
+  
+}
+catch(Exception e){
+}
+       jpEgresos = new JPanelEgresos();
+ this.add(jpEgresos);
+ this.pack();
+ funcion=3;
+
+
     }//GEN-LAST:event_jMenuEgresosActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        FrmFotografia fotografia = new FrmFotografia();
+        this.setVisible(true);
+        fotografia.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
