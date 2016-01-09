@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/profotos/entidades/clases/ArticuloVenta.java</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/profotos/entidades/clases/Perfil.java</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/profotos/presentacion/Profotos.java</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/profotos/entidades/clases/Usuario.java</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/profotos/entidades/mappings/Usuario.hbm.xml</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/negocio/utils/HibernateUtils.java</file>
-            <file>file:/C:/Users/luis/Desktop/ProfotosSistema/Profotos/ProfotosSistema/src/negocio/Clases/UsuarioNegocio.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -18,7 +18,7 @@ public class Evento {
     private Date fecha;
     private String lugar;
     private List<Venta> ventas;
-    private EstadoEvento estadoEvento;
+    private EstadoEvento estado;
 
         //<editor-fold defaultstate="collapsed" desc=" Getters and Setters del evento ">
     /**
@@ -92,17 +92,17 @@ public class Evento {
     }
 
     /**
-     * @return the estadoEvento
+     * @return the estado
      */
-    public EstadoEvento getEstadoEvento() {
-        return estadoEvento;
+    public EstadoEvento getEstado() {
+        return estado;
     }
 
     /**
-     * @param estadoEvento the estadoEvento to set
+     * @param estado the estado to set
      */
-    public void setEstadoEvento(EstadoEvento estadoEvento) {
-        this.estadoEvento = estadoEvento;
+    public void setEstado(EstadoEvento estado) {
+        this.estado = estado;
     }
       //</editor-fold>
     

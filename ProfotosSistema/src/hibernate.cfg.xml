@@ -20,16 +20,16 @@
         </property> 
         <mapping resource= "profotos/entidades/mappings/Usuario.hbm.xml" />
         <mapping resource= "profotos/entidades/mappings/Egreso.hbm.xml" />
-        <mapping resource= "profotos/entidades/mappings/Iva.hbm.xml" />
-        
+        <mapping resource= "profotos/entidades/mappings/Iva.hbm.xml" /> 
+        <mapping resource= "profotos/entidades/mappings/EgresoValor.hbm.xml" />
+        <mapping resource= "profotos/entidades/mappings/Sueldo.hbm.xml" />
+        <mapping resource= "profotos/entidades/mappings/Venta.hbm.xml" />
+        <mapping resource= "profotos/entidades/mappings/Evento.hbm.xml" />
         <!-- 
         <mapping resource= "profotos/entidades/mappings/Articulo.hbm.xml" />
         <mapping resource= "profotos/entidades/mappings/ArticuloVenta.hbm.xml" /> 
-        <mapping resource= "profotos/entidades/mappings/EgresoValor.hbm.xml" />
         <mapping resource= "profotos/entidades/mappings/Empleado.hbm.xml" /> 
-        <mapping resource= "profotos/entidades/mappings/Evento.hbm.xml" />
-        <mapping resource= "profotos/entidades/mappings/Historial.hbm.xml" />
-        <mapping resource= "profotos/entidades/mappings/Venta.hbm.xml" />
+        <mapping resource= "profotos/entidades/mappings/Historial.hbm.xml" /> 
         -->
     </session-factory>
 </hibernate-configuration>	
