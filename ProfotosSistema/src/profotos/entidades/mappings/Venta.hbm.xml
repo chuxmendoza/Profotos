@@ -11,6 +11,7 @@
         <property name="tipoEmpleado" column="tipoEmpleado">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">profotos.entidades.clases.TipoEmpleado</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <list name="egresos" cascade="all">

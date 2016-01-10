@@ -11,6 +11,7 @@
         <property name="estado" column="estado">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">profotos.entidades.clases.EstadoEvento</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
         <list name="ventas" cascade="all">

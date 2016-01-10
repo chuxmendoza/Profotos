@@ -5,6 +5,7 @@
  */
 package profotos.presentacion;
 
+import java.util.List;
 import javax.swing.JOptionPane;
 import negocio.Clases.EgresoNegocio;
 import negocio.Clases.EgresoValorNegocio;
@@ -16,6 +17,7 @@ import negocio.Clases.VentaNegocio;
 import profotos.entidades.clases.Egreso;
 import profotos.entidades.clases.EgresoValor;
 import profotos.entidades.clases.Evento;
+import profotos.entidades.clases.Perfil;
 import profotos.entidades.clases.Sueldo;
 import profotos.entidades.clases.Usuario;
 import profotos.entidades.clases.Venta;
@@ -31,15 +33,12 @@ public class Profotos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Evento entidad = EventoNegocio.Obtener(1);
-        if (entidad != null)
-            System.out.println("Evento: "+entidad.getNombre()+"\n"
-            +"Venta por: "+entidad.getVentas().get(0).getEmpleado());
-        else 
-            System.out.println("null");
-//        if (login)
-//            System.out.println("Login con éxito");
-//        else 
-//            System.out.println("Login fallido");
+        
+        List<Usuario> entidad = UsuarioNegocio.Buscar("ch");
+        
+        for(Usuario u : entidad)
+        {
+            System.out.println(u.getNombre());
+        }
     } 
 }

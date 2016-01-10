@@ -14,6 +14,7 @@
         <property name="perfil" column="perfil">
             <type name="org.hibernate.type.EnumType">
                 <param name="enumClass">profotos.entidades.clases.Perfil</param>
+                <param name="useNamed">true</param>
             </type>
         </property>
     </class>
