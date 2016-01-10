@@ -62,8 +62,7 @@ int funcion = 0;
         jMenuEventos = new javax.swing.JMenuItem();
         jMenuEgresos = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -124,21 +123,13 @@ int funcion = 0;
 
         jMenu6.setText("Configuración");
 
-        jMenuItem2.setText("Iva");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem6.setText("Sueldos");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItem6ActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem2);
-
-        jMenuItem4.setText("Fotografia");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        jMenu6.add(jMenuItem4);
+        jMenu6.add(jMenuItem6);
 
         jMenuBarArticulo.add(jMenu6);
 
@@ -219,13 +210,6 @@ funcion=1;
 
     }//GEN-LAST:event_jMenuEventosActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        FrmIva iva = new FrmIva();
-        this.setVisible(true);
-        iva.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void jMenuEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEgresosActionPerformed
         // TODO add your handling code here:
       try{
@@ -244,7 +228,7 @@ funcion=1;
 }
 catch(Exception e){
 }
-       jpEgresos = new JPanelEgresos();
+     jpEgresos = new JPanelEgresos();
  this.add(jpEgresos);
  this.pack();
  funcion=3;
@@ -252,12 +236,9 @@ catch(Exception e){
 
     }//GEN-LAST:event_jMenuEgresosActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
-        FrmFotografia fotografia = new FrmFotografia();
-        this.setVisible(true);
-        fotografia.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,10 +258,9 @@ catch(Exception e){
     private javax.swing.JMenuItem jMenuEgresos;
     private javax.swing.JMenuItem jMenuEventos;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuUsuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
